@@ -1,0 +1,67 @@
+/* ===== RestaurantPOS base styles ===== */
+:root{
+  --bg:#f1f5ff; --panel:#f6f3ff; --muted:#71717a;
+  --card:#fff; --br:0.9rem; --bd:rgba(0,0,0,.06);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:#f3f4f6;color:#111827;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+
+/* Layout */
+.app{min-height:100vh;display:flex}
+.sidebar{width:256px;background:#fff;border-right:1px solid #e5e7eb}
+.brand{display:flex;gap:.75rem;align-items:center;padding:1.25rem}
+.brand-badge{width:40px;height:40px;border-radius:12px;background:#4f46e5;color:#fff;display:grid;place-items:center;font-weight:700;font-size:1.1rem}
+.brand-sub{font-size:.75rem;color:var(--muted)}
+.nav{padding:0 .75rem}
+.nav a{display:flex;gap:.75rem;align-items:center;padding:.5rem .75rem;border-radius:.75rem}
+.nav a:hover{background:#f8fafc}
+.nav a.active{background:#eef2ff;color:#3730a3;font-weight:600}
+
+.main{flex:1;background:var(--bg)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+.panel{background:var(--panel);border-top:1px solid #e5e7eb;padding:1.5rem 0}
+.container{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+
+/* Cards & helpers */
+.card{background:var(--card);border:1px solid var(--bd);border-radius:var(--br)}
+.card-h{padding:.85rem 1rem;border-bottom:1px solid rgba(0,0,0,.05);font-weight:600}
+.card-c{padding:1rem}
+.stat{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-radius:var(--br)}
+.muted{color:var(--muted)}
+.grid{display:grid;gap:1rem}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1024px){.g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.g4,.g3{grid-template-columns:1fr}}
+
+.btn{display:inline-flex;align-items:center;gap:.45rem;border:1px solid rgba(0,0,0,.08);background:#fff;border-radius:.55rem;padding:.45rem .75rem}
+.btn.sm{padding:.3rem .55rem}
+.badge{font-size:.75rem;padding:.15rem .55rem;border-radius:.6rem;border:1px solid rgba(0,0,0,.08)}
+.input,select,textarea{width:100%;border:1px solid #e5e7eb;border-radius:.6rem;padding:.5rem .7rem}
+
+/* Pills (payment) */
+.pill{font-size:.85rem;border-radius:999px;padding:.45rem .85rem;border:1px solid rgba(0,0,0,.08);background:#fff}
+.pill.active{background:#eaf2ff}
+
+/* Chips (status) */
+.chip{font-size:.75rem;padding:.15rem .55rem;border-radius:.6rem;display:inline-flex;align-items:center;gap:.35rem}
+.chip-available{background:#dbf7ea;color:#0d6b4d}
+.chip-occupied{background:#fdecc8;color:#8a5600}
+.chip-reserved{background:#e6eeff;color:#2b52c6}
+.chip-ordering{background:#fdecc8;color:#8a5600}
+.chip-preparing{background:#e6eeff;color:#2b52c6}
+.chip-ready{background:#dbf7ea;color:#0d6b4d}
+
+/* Floor seats */
+.seat{width:100%;background:#fff;border:1px solid var(--bd);border-radius:var(--br);padding:1rem;text-align:left}
+.seat.selected{outline:2px solid #93c5fd}
+.seat.available{box-shadow:0 0 0 1px rgba(16,185,129,.15) inset}
+.seat.occupied{box-shadow:0 0 0 1px rgba(245,158,11,.15) inset}
+.seat.reserved{box-shadow:0 0 0 1px rgba(59,130,246,.15) inset}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;z-index:50}
+.modal.show{display:flex}
