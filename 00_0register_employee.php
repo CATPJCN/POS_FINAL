@@ -3,8 +3,8 @@
 session_start();
 // DATABASE CONNECTION only for admin
 $servername = "localhost";    
-$username = "posadmin";   
-$password = "adminpos555";   
+$username = "<your admin user name>";   
+$password = "<your user password>";   
 $dbname = "pos"; 
 
 $mysqli = new mysqli($servername, $username, $password, $dbname);

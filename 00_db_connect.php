@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";    
-$username = "Webemployees";   
-$password = "employee555";   
+$username = "<your web user name>";   
+$password = "<your user password>";    
 $dbname = "pos"; 
 
 // Create the connection
