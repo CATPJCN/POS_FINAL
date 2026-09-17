@@ -1,0 +1,30 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment Variables & Credentials
+.env
+.env.local
+.env.*.local
+*.log
+
+# IDE and Editor Directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# PHP & Web Server
+vendor/
+error_log
+access_log
+
+# Database Dumps & Local Backups
+*.sql.gz
+*.bak
+
+# Temporary files
+scratch/
+tmp/
